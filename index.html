@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Coast Limousine Hire</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+header {
+    background: url('https://images.unsplash.com/photo-1549921296-3c3b7d48b9b6') center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #00d4ff;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 12px;
+    width: 100%;
+    background: #00d4ff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>Gold Coast Limousine Hire</h1>
+        <p>Luxury rides for weddings, parties & airport transfers</p>
+        <a href="#booking" class="btn">Get a Quote</a>
+    </div>
+</header>
+
+<div class="section">
+    <h2>Our Services</h2>
+    <p>✔ Weddings</p>
+    <p>✔ Formals & Parties</p>
+    <p>✔ Airport Transfers</p>
+    <p>✔ Corporate Travel</p>
+</div>
+
+<div class="section" id="booking">
+    <h2>Book Your Limo</h2>
+    <form class="form" action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="pickup" placeholder="Pickup Location" required>
+        <input type="text" name="dropoff" placeholder="Dropoff Location" required>
+        <input type="datetime-local" name="datetime" required>
+
+        <select name="service">
+            <option>Wedding</option>
+            <option>Party / Night Out</option>
+            <option>Airport Transfer</option>
+            <option>Other</option>
+        </select>
+
+        <textarea name="message" placeholder="Extra details"></textarea>
+
+        <button type="submit">Request Booking</button>
+    </form>
+</div>
+
+<footer>
+    <p>© 2026 Gold Coast Limousine</p>
+    <p>Call: 04XX XXX XXX</p>
+</footer>
+
+</body>
+</html>
