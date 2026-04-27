@@ -6,104 +6,113 @@
 <title>Gold Coast Limousine Hire</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0a0a0a;
-        color: white;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+}
 
-    .hero {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 
-        background:
-            linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-            url('limo-background.png');
+    /* Fallback color if image fails */
+    background-color: #000;
 
-        background-size: cover;
-        background-position: center;
-    }
+    /* Background image */
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+        url('limo.png');
 
-    h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
-    }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    p {
-        color: #ccc;
-        font-size: 18px;
-    }
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
 
-    .btn {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 14px 28px;
-        background: #00e0ff;
-        color: black;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: bold;
-        transition: 0.2s;
-    }
+p {
+    color: #ccc;
+    font-size: 18px;
+}
 
-    .btn:hover {
-        background: #00c8e6;
-    }
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #00e0ff;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+}
 
-    .section {
-        padding: 80px 20px;
-        text-align: center;
-    }
+.btn:hover {
+    background: #00c8e6;
+}
 
-    .services {
-        max-width: 600px;
-        margin: auto;
-        text-align: left;
-        font-size: 18px;
-    }
+/* SECTION */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
 
-    .services li {
-        margin: 12px 0;
-    }
+.services {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    font-size: 18px;
+}
 
-    form {
-        max-width: 400px;
-        margin: 30px auto;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
+.services li {
+    margin: 12px 0;
+}
 
-    input, textarea {
-        padding: 12px;
-        border-radius: 5px;
-        border: none;
-        font-size: 14px;
-    }
+/* FORM */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
-    footer {
-        margin-top: 60px;
-        padding: 30px;
-        text-align: center;
-        color: #888;
-        border-top: 1px solid #222;
-    }
+input, textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
 
-    a {
-        color: #00e0ff;
-        margin: 0 10px;
-        text-decoration: none;
-    }
+/* FOOTER */
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    text-align: center;
+    color: #888;
+    border-top: 1px solid #222;
+}
 
-    a:hover {
-        text-decoration: underline;
-    }
+a {
+    color: #00e0ff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 </style>
 </head>
 
