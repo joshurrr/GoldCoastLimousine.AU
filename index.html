@@ -111,12 +111,25 @@ h1 {
     text-align: center;
 }
 
-/* SERVICES */
+/* SERVICES GRID - FORCED 3x2 */
 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* CARD */
@@ -126,8 +139,14 @@ h1 {
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     transition: 0.25s;
     position: relative;
+    min-height: 80px;
 }
 
 .card::before {
@@ -201,7 +220,7 @@ a {
 <!-- HERO -->
 <div class="hero">
     <h1>Gold Coast Limousine</h1>
-    <p>Luxury rides</p>
+    <p>Luxury rides for weddings, parties & VIP nights</p>
     <a href="#booking" class="btn">Get a Quote</a>
 </div>
 
