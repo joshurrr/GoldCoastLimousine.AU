@@ -15,6 +15,34 @@ body {
     color: white;
 }
 
+/* NAVBAR */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(5,6,13,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(90deg, #ff2bd6, #00e0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav a {
+    margin-left: 20px;
+    color: #ccc;
+    text-decoration: none;
+}
+
 /* HERO */
 .hero {
     min-height: 100vh;
@@ -59,6 +87,7 @@ h1 {
     box-shadow: 0 0 15px rgba(255,43,214,0.5),
                 0 0 25px rgba(0,224,255,0.4);
     transition: 0.25s;
+    border: none;
 }
 
 .btn:hover {
@@ -69,22 +98,20 @@ h1 {
 
 /* SECTION */
 .section {
-    padding: 80px 20px;
+    padding: 100px 20px 80px;
 }
 
-/* ALT */
 .section.alt {
     background: linear-gradient(#0a0c18, #05060d);
 }
 
-/* CONTAINER */
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     text-align: center;
 }
 
-/* SERVICES GRID */
+/* SERVICES */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -98,14 +125,11 @@ h1 {
     padding: 25px;
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.08);
-
     backdrop-filter: blur(10px);
-
     transition: 0.25s;
     position: relative;
 }
 
-/* glow border */
 .card::before {
     content: "";
     position: absolute;
@@ -125,6 +149,31 @@ h1 {
     transform: translateY(-5px);
 }
 
+/* PACKAGE SECTION */
+.packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.package {
+    padding: 30px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+}
+
+.package h3 {
+    margin-bottom: 10px;
+}
+
+.package p {
+    color: #aaa;
+    font-size: 14px;
+}
+
 /* FORM */
 form {
     max-width: 500px;
@@ -142,7 +191,6 @@ input, textarea {
     color: white;
 }
 
-/* focus glow */
 input:focus, textarea:focus {
     outline: none;
     border-color: #ff2bd6;
@@ -159,11 +207,6 @@ footer {
 
 a {
     color: #00e0ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 </style>
@@ -171,15 +214,25 @@ a:hover {
 
 <body>
 
+<!-- NAV -->
+<div class="nav">
+    <div class="logo">RADIORRR</div>
+    <div>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#booking">Book</a>
+    </div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
     <h1>Gold Coast Limousine</h1>
-    <p>Luxury rides for weddings, parties & VIP nights</p>
+    <p>Luxury rides + DJs for unforgettable nights</p>
     <a href="#booking" class="btn">Get a Quote</a>
 </div>
 
 <!-- SERVICES -->
-<div class="section">
+<div class="section" id="services">
     <div class="container">
         <h2>Our Services</h2>
 
@@ -194,8 +247,35 @@ a:hover {
     </div>
 </div>
 
+<!-- PACKAGES -->
+<div class="section alt" id="packages">
+    <div class="container">
+        <h2>DJ + Limo Packages</h2>
+
+        <div class="packages">
+            <div class="package">
+                <h3>Party Starter</h3>
+                <p>Limo pickup + 1 hour DJ set</p>
+                <button class="btn">Enquire</button>
+            </div>
+
+            <div class="package">
+                <h3>Night Out</h3>
+                <p>Return limo + DJ for your venue or home party</p>
+                <button class="btn">Enquire</button>
+            </div>
+
+            <div class="package">
+                <h3>VIP Experience</h3>
+                <p>Full night limo + professional DJ + custom playlist</p>
+                <button class="btn">Enquire</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- BOOKING -->
-<div class="section alt" id="booking">
+<div class="section" id="booking">
     <div class="container">
         <h2>Request a Booking</h2>
 
@@ -211,9 +291,7 @@ a:hover {
     </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
-    <p>Follow us:</p>
     <p>
         <a href="https://www.tiktok.com/@josh.u.rrr" target="_blank">TikTok</a> |
         <a href="https://radiorrr.com/" target="_blank">RadioRRR</a>
