@@ -1,268 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gold Coast Limousine Hire</title>
-
 <style>
-
-/* GLOBAL */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: radial-gradient(circle at top, #0d0f1a, #05060d);
-    color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+
+  background: url('limo.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
-/* NAVBAR */
-.nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: rgba(5,6,13,0.6);
-    backdrop-filter: blur(10px);
-    z-index: 10;
+/* dark overlay so text is readable */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 20px;
-    background: linear-gradient(90deg, #ff2bd6, #00e0ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+header {
+  padding: 30px;
+  text-align: center;
 }
 
-.nav a {
-    margin-left: 20px;
-    color: #ccc;
-    text-decoration: none;
+section {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* HERO */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-
-    background:
-        linear-gradient(rgba(5,6,13,0.85), rgba(5,6,13,0.95)),
-        url('limo.png');
-
-    background-size: cover;
-    background-position: center;
-}
-
-h1 {
-    font-size: 56px;
-    margin-bottom: 10px;
-    background: linear-gradient(90deg, #ff2bd6, #00e0ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    max-width: 500px;
-    color: #aaa;
-}
-
-/* BUTTON */
-.btn {
-    margin-top: 25px;
-    padding: 14px 32px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-
-    background: linear-gradient(90deg, #ff2bd6, #00e0ff);
-    box-shadow: 0 0 15px rgba(255,43,214,0.5),
-                0 0 25px rgba(0,224,255,0.4);
-    transition: 0.25s;
-    border: none;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(255,43,214,0.8),
-                0 0 40px rgba(0,224,255,0.6);
-}
-
-/* SECTION */
-.section {
-    padding: 100px 20px 80px;
-}
-
-.section.alt {
-    background: linear-gradient(#0a0c18, #05060d);
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-}
-
-/* SERVICES GRID - FORCED 3x2 */
-.services {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 40px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .services {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .services {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* CARD */
-.card {
-    background: rgba(255,255,255,0.03);
-    padding: 25px;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.25s;
-    position: relative;
-    min-height: 80px;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border-radius: 14px;
-    background: linear-gradient(90deg, #ff2bd6, #00e0ff);
-    opacity: 0;
-    z-index: -1;
-    transition: 0.25s;
-}
-
-.card:hover::before {
-    opacity: 1;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* FORM */
-form {
-    max-width: 500px;
-    margin: 40px auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-input, textarea {
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(255,255,255,0.03);
-    color: white;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #ff2bd6;
-    box-shadow: 0 0 10px rgba(255,43,214,0.4);
-}
-
-/* FOOTER */
 footer {
-    padding: 40px;
-    text-align: center;
-    color: #888;
-    border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
 }
-
-a {
-    color: #00e0ff;
-}
-
 </style>
-</head>
-
-<body>
-
-<!-- NAV -->
-<div class="nav">
-    <div class="logo">RADIORRR</div>
-    <div>
-        <a href="#services">Services</a>
-        <a href="#booking">Book</a>
-    </div>
-</div>
-
-<!-- HERO -->
-<div class="hero">
-    <h1>Gold Coast Limousine</h1>
-    <p>Luxury rides for weddings, parties & VIP nights</p>
-    <a href="#booking" class="btn">Get a Quote</a>
-</div>
-
-<!-- SERVICES -->
-<div class="section" id="services">
-    <div class="container">
-        <h2>Our Services</h2>
-
-        <div class="services">
-            <div class="card">Weddings</div>
-            <div class="card">Formals & Parties</div>
-            <div class="card">Airport Transfers</div>
-            <div class="card">Corporate Events</div>
-            <div class="card">Nights Out</div>
-            <div class="card">VIP Transfers</div>
-        </div>
-    </div>
-</div>
-
-<!-- BOOKING -->
-<div class="section alt" id="booking">
-    <div class="container">
-        <h2>Request a Booking</h2>
-
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <input type="text" placeholder="Pickup Location" required>
-            <input type="text" placeholder="Destination" required>
-            <input type="datetime-local" required>
-            <textarea placeholder="Extra details"></textarea>
-            <button class="btn">Submit Request</button>
-        </form>
-    </div>
-</div>
-
-<footer>
-    <p>
-        <a href="https://www.tiktok.com/@josh.u.rrr" target="_blank">TikTok</a> |
-        <a href="https://radiorrr.com/" target="_blank">RadioRRR</a>
-    </p>
-</footer>
-
-</body>
-</html>
